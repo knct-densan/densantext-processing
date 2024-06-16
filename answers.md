@@ -91,3 +91,65 @@ void draw (){
   rect (width/2-150+i++,height/2-150,300,300);
 }
 ```
+
+## 8. キーボードとマウス
+問1.
+```
+void setup (){
+  background (255);
+}
+
+void draw (){
+}
+
+int pressNum=0;
+
+void keyPressed (){
+  switch (++pressNum%4){
+    case 0:
+    background (255);
+    break;
+    
+    case 1:
+    background (255,0,0);
+    break;
+    
+    case 2:
+    background (0,255,0);
+    break;
+    
+    case 3:
+    background (0,0,255);
+    break;
+  }
+}
+```
+
+問2.
+```
+void setup (){
+  size (500,500);
+}
+
+void draw (){
+  background (255);
+  circle (mouseX,mouseY,20);
+}
+```
+
+問3.
+```
+void setup (){
+  size (500,500);
+}
+
+void draw (){
+  if (mouseX>100&&mouseX<400&&mouseY>100&&mouseY<400){
+    background (255,0,0);
+  }else{
+    background (255);
+  }
+  fill (0,255,0);
+  rect (100,100,300,300);
+}
+```
