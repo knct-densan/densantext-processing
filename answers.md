@@ -9,7 +9,8 @@
 5 . [関数](#5--関数)  
 7 . [画面の描画がしたい](#7--画面の描画がしたい)  
 8 . [キーボードとマウス](#8--キーボードとマウス)  
-9 . [クラスとインスタンス](#9--クラスとインスタンス)
+9 . [クラスとインスタンス](#9--クラスとインスタンス)  
+10 . [クラスを自作する](#10--クラスを自作する)
 
 ## 1 . 変数と定数と標準出力
 問1.
@@ -187,6 +188,26 @@ void keyTyped (){
   if (key=='\n'){
     print (buf);
     buf.setLength(0);
+  }
+}
+```
+
+## 10 . クラスを自作する
+問1.
+```
+class Student{
+  int grade,group,number;
+  String name;
+  
+  Student (int grade,int group,int number,String name){
+    this.grade=grade;
+    this.group=group;
+    this.number=number;
+    this.name=name;
+  }
+  
+  void getInfo (){
+    println (grade+"年"+group+"組"+number+"番:"+name);
   }
 }
 ```
