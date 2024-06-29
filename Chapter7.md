@@ -34,6 +34,10 @@ void setup (){
 |`rect (x,y,dx,dy)`|`rect (50,50,100,100)`|`(x1,y1)`の点を左上の頂点に持つ幅`dx`、高さ`dy`の四角形を描く。|
 |`circle (x,y,d)`|`circle (100,100,150)`|`(x,y)`を中心とした直径`d`の円を描く。|
 |`ellipse (x,y,dx,dy)`|`ellipse (100,100,100,150)`|`(x,y)`を中心(焦点ではない)に幅`dx`高さ`dy`の楕円を描く。|
+|`line (x1,y1,x2,y2)`|`line (50,50,100,150)`|始点が`(x1,y1)`、終点が`(x2,y2)`の線を引く。|
+|`text (str,x,y)`|`text ("Hello World!",0,0)`|`(x,y)`を起点に文字列`str`を描画する|
+|`textSize (size)`|`textSize (50)`|画面に描画するテキストのサイズを設定する|
+|`textAlign (pos1,pos2)`|`textAlign (CENTER,CENTER)`|テキストの描画の起点をずらす|
 
 また、processingにおいて`(x,y)=(0,0)`の点は画面左上の角であり、右が`x`プラス方向、下が`y`プラス方向であることに注意したい。
 
