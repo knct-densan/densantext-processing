@@ -10,7 +10,8 @@
 7 . [画面の描画がしたい](#7--画面の描画がしたい)  
 8 . [キーボードとマウス](#8--キーボードとマウス)  
 9 . [クラスとインスタンス](#9--クラスとインスタンス)  
-10 . [クラスを自作する](#10--クラスを自作する)
+10 . [クラスを自作する](#10--クラスを自作する)  
+11 . [参照型](#11--参照型)
 
 ## 1 . 変数と定数と標準出力
 問1.
@@ -25,6 +26,13 @@ void setup (){
 ```
 void setup (){
   println (8/3);
+}
+```
+
+問2.
+```
+void setup (){
+  println ((int)'a');
 }
 ```
 
@@ -208,6 +216,24 @@ class Student{
   
   void getInfo (){
     println (grade+"年"+group+"組"+number+"番:"+name);
+  }
+}
+```
+
+## 11 . 参照型
+問1.
+```
+class Sample{
+  int id;
+  float size;
+
+  Sample (int id,float size){
+    this.id=id;
+    this.size=size;
+  }
+  
+  Sample clone (){
+    return new Sample (id,size);
   }
 }
 ```
