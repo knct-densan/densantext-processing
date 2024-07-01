@@ -164,4 +164,4 @@ Student student=new Student (1,2,15,"試験的生徒");
 
 ```
 
-[^1]: 演習問題の解答例は[こちら](answers.md)
+[^1]: 演習問題の解答例は[ここ](answers.md)

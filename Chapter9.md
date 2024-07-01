@@ -144,4 +144,4 @@ void setup (){
 
 問2. 問1のプログラムをStringBuilderを用いて書き換えよ。
 
-[^1]: 演習問題の解答例は[こちら](answers.md)
+[^1]: 演習問題の解答例は[ここ](answers.md)

@@ -140,4 +140,4 @@ void setVal (int num){
 
 ```
 
-[^1]: 演習問題の解答例は[こちら](answers.md)
+[^1]: 演習問題の解答例は[ここ](answers.md)
