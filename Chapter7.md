@@ -9,14 +9,14 @@
 
 ## 図形の描画
 processingでは簡単な図形を描く関数がたくさん用意されている。以下に円を描く例を示す。
-```
+```java
 void setup (){
   circle (width/2,height/2,width/2);
 }
 ```
 `width`は画面幅、`height`は画面高さを表す変数である。  
 では、色を変えてみよう。色を変えるにはfill関数を使用する。
-```
+```java
 void setup (){
   fill (0);
   circle (width/2,height/2,width/2);
@@ -46,7 +46,7 @@ processingにはdrawというものがある。
 draw関数内に記述されたコードは一秒間に約60回実行されるという特徴を持つ。
 
 例. 少しずつ大きくなる円
-```
+```java
 void setup(){
   size (500,500);
 }

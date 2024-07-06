@@ -24,7 +24,7 @@
 最後に操作されたキーの文字を格納する。主に文字の読み取りに使用される。
 
 例. 押されたキーをそのまま出力
-```
+```java
 void draw(){
 }
 
@@ -50,7 +50,7 @@ void keyPressed (){
 |←|`LEFT`|
 
 例. Enterが押されたら"Hello World!"と出力
-```
+```java
 void draw(){
 }
 
@@ -92,7 +92,7 @@ void keyPressed (){
 
 
 例. マウスの左ボタンが押されている間のマウスの軌跡を表示する。
-```
+```java
 void setup (){
   size (500,500);
   background (255);

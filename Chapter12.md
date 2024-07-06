@@ -15,7 +15,7 @@
 ではどうするかというと、ボタンの仕組みのクラスを一つ作ってからそのクラスを継承すればいいのだ。
 
 継承するには以下のように記述する。
-```
+```java
 class クラス名 extends 継承するクラス名{
   ここにフィールドやメソッドを記述
 }
@@ -24,7 +24,7 @@ class クラス名 extends 継承するクラス名{
 また、子クラスのコンストラクタが実行される前に自動的に親クラスのコンストラクタが呼び出される。
 
 例. 親クラス
-```
+```java
 class Super{
   String str;
   
@@ -39,7 +39,7 @@ class Super{
 }
 ```
 例. 子クラス
-```
+```java
 class Sub extends Super{
   Sub (){
     str="子クラス";//親クラスのフィールドが使える
@@ -56,7 +56,7 @@ class Sub extends Super{
 また、親クラスのコンストラクタは`super (引数)`と書くことで呼び出せる。コンストラクタの呼び出しは親クラスのものでも、自身のコンストラクタの一行目にしか記述ができない。
 
 例. 親クラス
-```
+```java
 class Super{
   int a;
   
@@ -70,7 +70,7 @@ class Super{
 }
 ```
 例. 子クラス
-```
+```java
 class Sub extends Super{
   int a;//フィールドの上書き
   
@@ -93,7 +93,7 @@ class Sub extends Super{
 子クラスに親クラスのメソッドと全く同じ返り値の型、名前、引数をとるメソッドを作成する場合を特別にオーバーライドと呼ぶ。オーバーライドする関数の前に`@Override`と記述すると明示的にオーバーライドできる。記述されている場合、実行時にオーバーライド可能かを確かめ、オーバーライドできない場合はエラーを出力する。
 
 例. 親クラスにするButtonクラス
-```
+```java
 class Button{
   float x,y,dx,dy;
   
@@ -115,7 +115,7 @@ class Button{
 }
 ```
 例. 子クラスのImageButtonクラス
-```
+```java
 class ImageButton extends Button{
   PImage img;
   
@@ -141,7 +141,7 @@ class ImageButton extends Button{
 
 ## 継承を禁止する
 クラスの中には継承を禁止しているクラス(Stringなど)が存在している。禁止の仕方は簡単でクラスの宣言前に、`final`を付け加えるだけである。
-```
+```java
 final class Sample{
 }
 

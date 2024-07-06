@@ -14,14 +14,14 @@ processing標準のクラスではゲームのパーツとしては力不足か�
 
 ## クラスの宣言
 クラスは以下のようにすることで簡単に宣言できる。クラス名は通例で一文字目を大文字で書く。
-```
+```java
 class クラス名{
   ここにフィールドやメソッドを記述
 }
 ```
 
 例. `(x,y)`を中心に半径`r`、周期`T`で回転する、直径`pd`の点のクラス
-```
+```java
 class RotatePoint{
   int x,y,r,T,pd;
   float rad;
@@ -37,7 +37,7 @@ class RotatePoint{
 }
 ```
 例. RotatePointクラスの使用例
-```
+```java
 void setup (){
   size (500,500);
   p=new RotatePoint ();
@@ -67,7 +67,7 @@ void draw (){
 主にフィールドの初期化に使用される。
 
 以下のように書く。
-```
+```java
 class TestClass{
   TestClass (){
     処理
@@ -75,7 +75,7 @@ class TestClass{
 }
 ```
 例. RotatePointクラスとその使用例の書き換え
-```
+```java
 class RotatePoint{
   int x,y,r,T,pd;
   float rad;
@@ -99,7 +99,7 @@ class RotatePoint{
   }
 }
 ```
-```
+```java
 void setup (){
   size (500,500);
   p=new RotatePoint (250,250,200,10,3);
@@ -120,7 +120,7 @@ void draw (){
 別のコンストラクタはコンストラクタの一行目であれば、`this(引数)`呼び出すことができる。これを利用して引数がなかった時の初期値の設定を簡単にできる。
 
 例. RotatePointで引数無しのコンストラクタを記述
-```
+```java
 class RotatePoint{
   int x,y,r,T,pd;
   float rad;
@@ -155,7 +155,7 @@ class RotatePoint{
 なお、各変数はコンストラクタ`Student ([学年],[組],[出席番号],[名前])`により初期化できるようにしておくこと。
 
 初期化例
-```
+```java
 Student student=new Student (1,2,15,"試験的生徒");
 ```
 出力例

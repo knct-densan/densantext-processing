@@ -13,18 +13,18 @@
 
 ## 用意されているクラスを使う
 まずクラスを利用するには、インスタンスと呼ばれる実体が必要である。インスタンスを生成するには以下のように書く。
-```
+```java
 new クラス名(引数)
 ```
 この書き方を見ればわかるが実は[配列](Chapter4.md)もクラスの一つである。  
 よってクラスの変数を用意するにはこのように書く。
-```
+```java
 クラス名 変数名=new クラス名(引数);
 ```
 また、フィールドやメソッドにアクセスするには変数の後にピリオドを付ける必要がある。
 
 例. フィールドにアクセス
-```
+```java
 変数名.フィールド名;
 ```
 以下にprocessingでよく使われるクラスの一例をあげる。
@@ -33,12 +33,12 @@ new クラス名(引数)
 Stringクラスだけ特別でnewを書くことなく使用することができる。しかしnewを書いて使うこともできる。
 
 例. String型の変数`str`を宣言しnewを使って`"Hello World!"`で初期化
-```
+```java
 String str=new String ("Hello World!");
 ```
 
 また、Stringクラスのメソッドにはn文字目の文字を取得するcharAtメソッドや、文字が何番目に含まれるかを検索するindexOfメソッドなどが存在する。
-```
+```java
 String str=new String ("Hello World!");
 
 void setup (){
@@ -53,7 +53,7 @@ void setup (){
 文字列を編集するときに使うクラスである。文字列の連結、文字の置き換え、文字の削除等のかゆいところに手が届くクラスである。
 
 例. StringBuilderの機能
-```
+```java
 StringBuilder str=new StringBuilder ("Hello World!");
 
 void setup (){
@@ -74,12 +74,12 @@ void setup (){
 大きさを自由に変えることのできる配列(可変長配列)のクラス。addメソッドで要素の追加removeメソッドで要素の削除を行える。先頭の要素は0番目。
 
 例. 任意のクラスの可変長配列`array`の宣言
-```
+```java
 ArrayList<クラスの型> array=new ArrayList();
 ```
 
 例. 追加と削除
-```
+```java
 void setup (){
   ArrayList<String> strs=new ArrayList();
   strs.add ("Hello");//要素の追加
@@ -102,7 +102,7 @@ void setup (){
 また、ArrayListでintなどクラスではない型を扱いたいときには[ラッパークラス](#ラッパークラス)と呼ばれるクラスを利用する必要がある。
 
 クラスの型にObject型を使うとなんでも入れることができるようになる。
-```
+```java
 ArrayList<Object> array=new ArrayList();
 void setup (){
   array.add (10);//Integer型
@@ -129,7 +129,7 @@ void setup (){
 
 また、ラッパークラスはクラスであるが元の型と概ね同じような使い方ができ、型の値をラッパークラスに変化させることをボックス化(ボクシング)、ラッパークラスから元の型に戻すことをボックス化解除(アンボクシング)と呼ぶ。
 
-```
+```java
 void setup (){
   Integer val1=10;//int → Integer (ボックス化)
   int val2=val1;//Integer → int (ボックス化解除)

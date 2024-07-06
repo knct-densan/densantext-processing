@@ -18,7 +18,7 @@
 
 ## 1. 変数と定数と標準出力
 問1.
-```
+```java
 void setup (){
   println (PI);
 }
@@ -26,14 +26,14 @@ void setup (){
 
 ## 2. 変数と計算
 問1.
-```
+```java
 void setup (){
   println (8/3);
 }
 ```
 
 問2.
-```
+```java
 void setup (){
   println ((int)'a');
 }
@@ -41,7 +41,7 @@ void setup (){
 
 ## 3. 制御文
 問1.
-```
+```java
 void setup (){
   for (int i=0;i<=45;i+=3){
     println (i);
@@ -51,7 +51,7 @@ void setup (){
 
 ## 4. 配列
 問1.
-```
+```java
 void setup (){
   int[] array=new int[5];
   for (int i=0;i<array.length;i++){
@@ -65,14 +65,14 @@ void setup (){
 
 ## 5. 関数
 問1.
-```
+```java
 int big (int n){
   return n*2;
 }
 ```
 
 問2.
-```
+```java
 void tri (int hei){
   for (int i=0;i<hei;i++){
     for (int j=0;j<=i;j++){
@@ -85,7 +85,7 @@ void tri (int hei){
 
 ## 6. 変数の有効範囲
 問1.
-```
+```java
 void setup(){
   n=0;
 }
@@ -99,14 +99,14 @@ int n;
 
 ## 7. 画面の描画がしたい
 問1.
-```
+```java
 void setup (){
   size (500,500);
   background (255);
 }
 ```
 問2.
-```
+```java
 void setup (){
   fullScreen ();
 }
@@ -122,7 +122,7 @@ void draw (){
 
 ## 8. キーボードとマウス
 問1.
-```
+```java
 void setup (){
   background (255);
 }
@@ -154,7 +154,7 @@ void keyPressed (){
 ```
 
 問2.
-```
+```java
 void setup (){
   size (500,500);
 }
@@ -166,7 +166,7 @@ void draw (){
 ```
 
 問3.
-```
+```java
 void setup (){
   size (500,500);
 }
@@ -184,7 +184,7 @@ void draw (){
 
 ## 9. クラスとインスタンス
 問1.
-```
+```java
 ArrayList<Character> buf=new ArrayList();
 
 void draw(){
@@ -202,7 +202,7 @@ void keyTyped (){
 ```
 
 問2.
-```
+```java
 StringBuilder buf=new StringBuilder();
 
 void draw(){
@@ -219,7 +219,7 @@ void keyTyped (){
 
 ## 10. クラスを自作する
 問1.
-```
+```java
 class Student{
   int grade,group,number;
   String name;
@@ -239,7 +239,7 @@ class Student{
 
 ## 11. 参照型
 問1.
-```
+```java
 class Sample{
   int id;
   float size;
@@ -257,7 +257,7 @@ class Sample{
 
 ## 12. クラスの継承
 問1
-```
+```java
 class StrList extends ArrayList<String>{
   void putAll (){
     for (String str:this){
@@ -269,7 +269,7 @@ class StrList extends ArrayList<String>{
 
 ## 13. 画像を扱う
 問1.
-```
+```java
 void drawImage (PImage img,float x,float y,float a){
   image (img,x,y,img.width*a,img.height*a);
 }
