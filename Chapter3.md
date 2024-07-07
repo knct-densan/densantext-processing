@@ -2,14 +2,14 @@
 条件分岐や繰り返し等のプログラムをもっと便利にできる文を紹介する。
 
 ## 目次
-[if文](#if文)  
-[switch文](#switch文)  
-[while文](#while文)  
-[do-while文](#do-while文)  
-[for文](#for文)  
-[拡張for文](#拡張for文)  
-[ラベル付きbreak](#ラベル付きbreak)  
-[演習問題](#演習問題)
+* [if文](#if文)  
+* [switch文](#switch文)  
+* [while文](#while文)  
+* [do-while文](#do-while文)  
+* [for文](#for文)  
+* [拡張for文](#拡張for文)  
+* [ラベル付きbreak](#ラベル付きbreak)  
+* [演習問題](#演習問題)
 
 ## if文
 if文はある条件に達したときに中のコードを実行する文である。
