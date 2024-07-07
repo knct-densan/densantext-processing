@@ -349,7 +349,7 @@ AudioPlayer player;
 
 void setup (){
   size (600,600);
-  player=minim.loadFile ("ボックスワンターバ～ン.wav");//必要に応じて変更
+  player=minim.loadFile ("ファイルのパス");//必要に応じて変更
   bar=new PlayBar (0,height-5,width,10,10,color (200,200,200),color(200,0,0),color(255,0,0));//再生バーの初期位置、色
 }
 
