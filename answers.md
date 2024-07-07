@@ -15,6 +15,7 @@
 11. [参照型](#11-参照型)
 12. [クラスの継承](#12-クラスの継承)
 13. [画像を扱う](#13-画像を扱う)
+14. [音声データを使う(Minimライブラリの使用)](#14-音声データを使うminimライブラリの使用)
 
 ## 1. 変数と定数と標準出力
 問1.
@@ -348,8 +349,8 @@ AudioPlayer player;
 
 void setup (){
   size (600,600);
-  player=minim.loadFile ("ファイルのパス");//必要に応じて変更
-  bar=new PlayBar (0,height-5,width,10,20,color(200,0,0),color(255,0,0));//再生バーの初期位置、色
+  player=minim.loadFile ("ボックスワンターバ～ン.wav");//必要に応じて変更
+  bar=new PlayBar (0,height-5,width,10,10,color (200,200,200),color(200,0,0),color(255,0,0));//再生バーの初期位置、色
 }
 
 void draw (){
@@ -415,19 +416,20 @@ void keyPressed (){
 class PlayBar{//再生バー
   float px,pr;//ポイントのx座標と半径
   float lsx,ly,lfx,lweight;//再生バーのx座標の始点、終点とy座標
-  color lineC,pointC;//色情報
+  color lbackC,lineC,pointC;//色情報
   
-  PlayBar (float linesx,float liney,float linefx,float lineWeight,float pointr,color line,color point){
-    this (linesx,liney,linefx,lineWeight,0,pointr,line,point);
+  PlayBar (float linesx,float liney,float linefx,float lineWeight,float pointr,color lback,color line,color point){
+    this (linesx,liney,linefx,lineWeight,0,pointr,lback,line,point);
   }
   
-  PlayBar (float linesx,float liney,float linefx,float lineWeight,float pointx,float pointr,color line,color point){//初期化
+  PlayBar (float linesx,float liney,float linefx,float lineWeight,float pointx,float pointr,color lback,color line,color point){//初期化
     lsx=linesx;
     ly=liney;
     lfx=linefx;
     px=pointx;
     pr=pointr;
     lweight=lineWeight;
+    lbackC=lback;
     lineC=line;
     pointC=point;
   }
@@ -446,7 +448,7 @@ class PlayBar{//再生バー
     line (0,ly,px,ly);//バーの描画
     fill (255,0,0);//ポイントの色
     noStroke ();//輪郭線の削除
-    circle (px,ly,pr);//ポイントの描画
+    circle (px,ly,pr*2);//ポイントの描画
     pop ();//なくてもいい(描画スタイルのロード)
   }
   
