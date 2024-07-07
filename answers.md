@@ -451,16 +451,18 @@ class PlayBar{//再生バー
   }
   
   boolean pressed=false,drag=false;
+  float clickpX;
   
   float dragPoint (){//ドラッグ
     if (mousePressed&&mouseButton==LEFT&&!pressed){//クリックの瞬間
       if (hoverPoint()){//マウスポインタがポイントをクリック出来ているか
         drag=true;
+        clickpX=px-mouseX;
       }
       pressed=true;
     }
     if (drag&&mousePressed){//ドラッグ中
-      px+=mouseX-pmouseX;//x座標でのマウスポインタの移動量
+      px=clickpX+mouseX;
       if (px<lsx){
         px=lsx;
       }
