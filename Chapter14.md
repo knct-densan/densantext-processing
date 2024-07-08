@@ -79,7 +79,7 @@ void mousePressed (){
 
 例. 読み込み
 ```java
-player=minim.loadFile ("ファイルのパス");
+AudioPlayer player=minim.loadFile ("ファイルのパス");
 ```
 例. 再生
 ```java
