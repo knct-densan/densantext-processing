@@ -16,6 +16,7 @@
 12. [クラスの継承](#12-クラスの継承)
 13. [画像を扱う](#13-画像を扱う)
 14. [音声データを使う(Minimライブラリの使用)](#14-音声データを使うminimライブラリの使用)
+15. [テキストデータのセーブとロード](#15-テキストデータのセーブとロード)
 
 ## 1. 変数と定数と標準出力
 問1.
@@ -486,5 +487,21 @@ class PlayBar{//再生バー
     }
     return false;
   }
+}
+```
+
+## 15. テキストデータのセーブとロード
+問1.
+```java
+void setup (){
+  String[] str=loadStrings ("data.txt");//保存と読み込みは同じファイル
+  Integer n;
+  if (str==null){//ファイルが見つからないとき
+    n=0;
+  }else{
+    n=Integer.parseInt(str[0]);
+  }
+  println (++n);
+  saveStrings ("data.txt",new String[]{n.toString()});
 }
 ```
