@@ -57,7 +57,6 @@ void setup (){
   println (a++);//4 (実行後5になる)
   println (--a);//4 (5-1)
   println (a--);//4 (実行後3になる)
-  println (a+++a);//7 (3+4)
 }
 ```
 実行結果
