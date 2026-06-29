@@ -72,7 +72,7 @@ class Super{
 例. 子クラス
 ```java
 class Sub extends Super{
-  int a;//フィールドの上書き
+  int b;
   
   Sub (int n1,int n2){
     super (n1);//親クラスのコンストラクタ
@@ -80,11 +80,11 @@ class Sub extends Super{
   }
   
   void putVal2 (){
-    println (a);
+    println (b);
   }
   
   void putSum (){
-    println (a+super.a);
+    println (b+super.a);
   }
 }
 ```
