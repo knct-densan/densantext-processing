@@ -17,6 +17,7 @@
 13. [画像を扱う](#13-画像を扱う)
 14. [音声データを使う(Minimライブラリの使用)](#14-音声データを使うminimライブラリの使用)
 15. [テキストデータのセーブとロード](#15-テキストデータのセーブとロード)
+16. [JSONを使ってみよう](#16-jsonを使ってみよう)
 
 ## 1. 変数と定数と標準出力
 問1.
@@ -503,5 +504,23 @@ void setup (){
   }
   println (++n);
   saveStrings ("data.txt",new String[]{n.toString()});
+}
+```
+
+## 16. JSONを使ってみよう
+問1.
+```java
+void setup(){
+  JSONObject json=loadJSONObject("data.json");//data.jsonを読み込む
+
+  JSONArray data=json.getJSONArray("data");//dataキーの情報の取得
+  for(int i=0;i<data.size();i++){//すべての要素に対して
+    JSONObject tmp=data.getJSONObject(i);
+    if(tmp.getBoolean("float")){//小数かどうか
+      println("小数: "+tmp.getFloat("value"));
+    }else{
+      println("整数: "+tmp.getInt("value"));
+    }
+  }
 }
 ```
