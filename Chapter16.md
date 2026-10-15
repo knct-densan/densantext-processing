@@ -212,12 +212,13 @@ void setup(){
     //読み込んだ情報はJSONObjectクラスの変数になるぞ!
     JSONObject json=loadJSONObject("data.json");//data.jsonを読み込む
 
+    //JSONの配列はJSONArrayクラスの変数だ!
     JSONArray data=json.getJSONArray("data");//dataキーの情報の取得
     JSONObject second_data=data.getJSONObject(1);//二つ目の情報の取得
     println(second_data);//取得した情報の出力
 }
 ```
-なお、配列の要素数は`size`メソッドで取得することができる。
+なお、`JSONArray`の要素数は`size`メソッドで取得することができる。
 
 ## 演習問題[^1]
 問1. `data.json`の`value`キーの値を`float`キーの値に応じて出力を分けよ。
